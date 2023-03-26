@@ -8,9 +8,7 @@ def quicksort(lst):
 
 
 def is_anagram(first_string, second_string):
-    if first_string == "":
-        return (first_string, second_string, False)
-    if second_string == "":
+    if not first_string and not second_string:
         return (first_string, second_string, False)
 
     lower_first = first_string.lower()
