@@ -8,8 +8,11 @@ def quicksort(lst):
 
 
 def is_anagram(first_string, second_string):
-    if first_string == "" or second_string == "":
-        return False
+    if first_string == "":
+        return (first_string, second_string, False)
+    if second_string == "":
+        return (first_string, second_string, False)
+
     lower_first = first_string.lower()
     lower_second = second_string.lower()
     ord_first = ''.join(quicksort(lower_first))
