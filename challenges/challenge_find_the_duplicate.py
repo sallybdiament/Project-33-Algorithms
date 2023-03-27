@@ -23,9 +23,15 @@ def find_duplicate(nums):
         return False
     ordered_nums = quicksort(nums)
     repeated = 0
-    for i in range(len(ordered_nums) - 1):
-        if ordered_nums[i] == ordered_nums[i+1]:
-            repeated = ordered_nums[i]
+    index = 0
+    while index <= len(ordered_nums) - 2:
+        if ordered_nums[index] == ordered_nums[index + 1]:
+            repeated = ordered_nums[index]
+            break
+        index += 1
+    # for i in range(len(ordered_nums) - 1):
+    #     if ordered_nums[i] == ordered_nums[i+1]:
+    #         repeated = ordered_nums[i]
     if repeated != 0:
         return repeated
     else:
